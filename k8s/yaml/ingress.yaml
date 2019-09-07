@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-karma-bot
+  namespace: karma-bot
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /
+          backend:
+            # specify the ES service name
+            serviceName: heyburrito
+            servicePort: 3333

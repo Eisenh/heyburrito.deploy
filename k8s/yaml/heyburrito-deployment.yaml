@@ -21,7 +21,7 @@ spec:
       containers:
       - env:
         - name: BOT_NAME
-          value: heyburrito
+          value: 'Thanks you bot'
         - name: DATABASE_DRIVER
           value: mongodb
         - name: MONGODB_DATABASE
@@ -33,12 +33,17 @@ spec:
         - name: SLACK_DAILY_CAP
           value: "5"
         - name: SLACK_EMOJI_INC
-          value: ':burrito:'
-        image: chralp/heyburrito:latest
+          value: ':green-onion:'
+        - name: DM_NOTIFICATION_ENABLED
+          value: 'true'
+        - name: IN_CHANNEL_NOTIFICATION_ENABLED
+          value: 'true'
+        - name: SCOREBOARD_URL
+          value: http://159.203.52.225.xip.io/
+        image: jrewerts/heyburrito:v1.1.1
         name: heyburrito
         ports:
         - containerPort: 3333
-        - containerPort: 8080
         resources: {}
       restartPolicy: Always
 status: {}
