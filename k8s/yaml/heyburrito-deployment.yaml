@@ -21,7 +21,7 @@ spec:
       containers:
       - env:
         - name: BOT_NAME
-          value: 'Thanks you bot'
+          value: 'Thank you bot'
         - name: DATABASE_DRIVER
           value: mongodb
         - name: MONGODB_DATABASE
