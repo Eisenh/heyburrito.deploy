@@ -39,7 +39,7 @@ spec:
         - name: IN_CHANNEL_NOTIFICATION_ENABLED
           value: 'true'
         - name: SCOREBOARD_URL
-          value: http://159.203.52.225.xip.io/
+          value: http://thankyoubot.devedmonton.com
         image: jrewerts/heyburrito:v1.1.1
         name: heyburrito
         ports:
